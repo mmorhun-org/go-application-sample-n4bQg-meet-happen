@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: test-component-name
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: test-component-name
+    app.kubernetes.io/part-of: go-application-sample
+  name: test-component-name
+  namespace: test
+spec:
+  selector:
+    app.kubernetes.io/instance: test-component-name
+status:
+  loadBalancer: {}
